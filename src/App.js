@@ -47,7 +47,7 @@ class App extends Component {
 
     handlePaginationSelect(selectedPage) {
         console.log(selectedPage);
-        let offset = (selectedPage == 1)? 0 : this.state.limit * (selectedPage-1);
+        let offset = (selectedPage === 1)? 0 : this.state.limit * (selectedPage-1);
 
 
         this.loadPokemon(`${this.props.baseUrl}/pokemon/?limit=${this.state.limit}&offset=${offset}`);
